@@ -1,7 +1,7 @@
 import type { Config, ThemeConfig } from '@docusaurus/types';
-import type { Options } from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
-import ci from 'ci-info';
+import type * as Preset from '@docusaurus/preset-classic';
+import * as ciInfo from 'ci-info';
 
 
 const config: Config = {
@@ -9,7 +9,7 @@ const config: Config = {
   tagline: 'DevOps Engineer & Full Stack Developer',
   favicon: 'img/favicon.ico',
   url: 'https://shubhamnarkhede.vercel.app',
-  baseUrl: ci.GITHUB_ACTIONS ? '/portfolio/' : '/',
+  baseUrl: ciInfo.GITHUB_ACTIONS ? '/portfolio/' : '/',
   organizationName: 'spnarkhede',
   projectName: 'shubhamnarkhede',
   onBrokenLinks: 'warn',
