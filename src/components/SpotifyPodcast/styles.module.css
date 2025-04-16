@@ -1,0 +1,35 @@
+.spotifyPodcastContainer {
+  margin: 2rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.spotifyPodcastHeader {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.spotifyIcon {
+  margin-right: 0.5rem;
+}
+
+.spotifyPodcastTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.spotifyPodcastEmbed {
+  background-color: #f5f5f5;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .spotifyPodcastEmbed {
+  background-color: #1a1a1a;
+}

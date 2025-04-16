@@ -1,0 +1,250 @@
+.recommendationsPanel {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.recommendationsCarousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.recommendationsContainer {
+  flex: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.recommendationCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recommendationHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.recommendationImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid var(--ifm-color-primary);
+}
+
+.recommendationImagePlaceholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.recommendationAuthor {
+  flex: 1;
+}
+
+.recommendationName {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem 0;
+}
+
+.recommendationTitle {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0;
+}
+
+.recommendationRating {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.ratingStar {
+  color: var(--ifm-color-emphasis-300);
+  margin-right: 0.25rem;
+}
+
+.ratingStarFilled {
+  color: #ffc107;
+}
+
+.recommendationQuote {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-800);
+  font-style: italic;
+  margin: 0 0 1.5rem 0;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.recommendationQuote::before,
+.recommendationQuote::after {
+  content: '"';
+  font-size: 1.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: 700;
+}
+
+.recommendationQuote::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.recommendationQuote::after {
+  position: absolute;
+  margin-left: 0.2rem;
+}
+
+.recommendationFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.recommendationDate {
+  font-weight: 500;
+}
+
+.recommendationRelationship {
+  background-color: var(--ifm-color-emphasis-100);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.carouselButton {
+  background-color: var(--ifm-color-emphasis-100);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-emphasis-700);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  z-index: 2;
+}
+
+.carouselButton:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+.carouselButtonPrev {
+  left: 0;
+  transform: translateX(-50%);
+}
+
+.carouselButtonNext {
+  right: 0;
+  transform: translateX(50%);
+}
+
+.recommendationIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.recommendationIndicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-emphasis-300);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeIndicator {
+  background-color: var(--ifm-color-primary);
+  transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .recommendationCard {
+    padding: 1.5rem;
+  }
+  
+  .recommendationQuote {
+    font-size: 1rem;
+  }
+  
+  .carouselButton {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .carouselButtonPrev {
+    left: 10px;
+    transform: none;
+  }
+  
+  .carouselButtonNext {
+    right: 10px;
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendationCard {
+    padding: 1.25rem;
+  }
+  
+  .recommendationHeader {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .recommendationImage,
+  .recommendationImagePlaceholder {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .recommendationRating {
+    justify-content: center;
+  }
+  
+  .recommendationFooter {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}

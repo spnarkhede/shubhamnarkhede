@@ -1,0 +1,132 @@
+.resumeCenterContainer {
+  margin: 40px 0;
+}
+
+.resumeCenterTitle {
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--ifm-color-primary);
+}
+
+.resumeCenterDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 32px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.documentsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.documentCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.documentCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.documentIconContainer {
+  width: 100%;
+  padding: 24px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.documentIconContainer svg {
+  width: 48px;
+  height: 48px;
+}
+
+.documentContent {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.documentTitle {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  color: var(--ifm-heading-color);
+}
+
+.documentDescription {
+  margin-bottom: 16px;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.documentMeta {
+  margin-bottom: 16px;
+  font-size: 0.8125rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.documentInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.documentFileName {
+  font-family: monospace;
+}
+
+.documentDate {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.downloadButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .documentsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .documentCard {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .documentCard:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}

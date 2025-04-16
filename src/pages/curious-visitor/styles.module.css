@@ -1,0 +1,678 @@
+.introductionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.welcomeSection {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.welcomeHeading {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.welcomeSubheading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.welcomeDescription {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.profileSection {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.profileImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 5px solid var(--ifm-color-primary);
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.profileName {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.profileTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.profileBio {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(var(--ifm-color-primary-rgb), 0.4);
+  color: white;
+}
+
+.interestsSection {
+  margin: 3rem 0;
+}
+
+.interestsTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.interestsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.interestCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.interestCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.interestIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.interestTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.interestDescription {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.journeySection {
+  margin: 4rem 0;
+}
+
+.journeyTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.journeyTimeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.journeyTimeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: var(--ifm-color-primary);
+  transform: translateX(-50%);
+}
+
+.journeyEvent {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.journeyEvent:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.journeyEvent:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.journeyEventDot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.journeyEventYear {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.journeyEventTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.journeyEventDescription {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.exploreSection {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.exploreTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+}
+
+.exploreDescription {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.exploreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.exploreCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.exploreCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.exploreCardImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.exploreCardContent {
+  padding: 1.5rem;
+}
+
+.exploreCardTitle {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.exploreCardDescription {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.exploreCardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.exploreCardLink:hover {
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+.ctaSection {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-primary);
+}
+
+.ctaDescription {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(var(--ifm-color-primary-rgb), 0.3);
+}
+
+.ctaButton:hover {
+  background-color: var(--ifm-color-primary-darker);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(var(--ifm-color-primary-rgb), 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profileSection {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .socialLinks {
+    justify-content: center;
+  }
+  
+  .journeyTimeline::before {
+    left: 20px;
+  }
+  
+  .journeyEvent:nth-child(odd),
+  .journeyEvent:nth-child(even) {
+    padding-left: 50px;
+    padding-right: 0;
+    text-align: left;
+  }
+  
+  .journeyEventDot {
+    left: 20px;
+  }
+}
+
+/* Portfolio Gallery Styles */
+.gallerySection {
+  margin: 4rem 0;
+}
+
+.galleryTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.galleryDescription {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-800);
+  text-align: center;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.galleryItem {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover .galleryImage {
+  filter: brightness(0.8);
+}
+
+.galleryOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 1rem;
+  color: white;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.galleryItem:hover .galleryOverlay {
+  transform: translateY(0);
+}
+
+.galleryItemTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.galleryItemDescription {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Book Reviews Styles */
+.bookReviewsSection {
+  margin: 4rem 0;
+}
+
+.bookReviewsTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.bookReviewsDescription {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-800);
+  text-align: center;
+}
+
+.bookReviewsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.bookReviewCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.bookReviewCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bookCover {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.bookReviewContent {
+  padding: 1.5rem;
+}
+
+.bookTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.bookAuthor {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.bookRating {
+  display: flex;
+  gap: 0.3rem;
+  margin-bottom: 1rem;
+  color: #ffc107;
+}
+
+.bookExcerpt {
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.readReviewLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.readReviewLink:hover {
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+/* Contact Form Styles */
+.contactForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: var(--ifm-card-background-color);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.formInput,
+.formTextarea,
+.formSelect {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.formInput:focus,
+.formTextarea:focus,
+.formSelect:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px rgba(var(--ifm-color-primary-rgb), 0.2);
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.submitButton:hover {
+  background-color: var(--ifm-color-primary-darker);
+}
+
+/* FAQ Styles */
+.faqSection {
+  margin: 4rem 0;
+}
+
+.faqTitle {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-primary);
+  text-align: center;
+}
+
+.faqDescription {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-800);
+  text-align: center;
+}
+
+.faqItem {
+  margin-bottom: 1.5rem;
+  background-color: var(--ifm-card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.faqQuestion {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  background-color: var(--ifm-color-emphasis-100);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqAnswer {
+  padding: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .welcomeHeading {
+    font-size: 2rem;
+  }
+  
+  .welcomeSubheading {
+    font-size: 1.3rem;
+  }
+  
+  .profileImage {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .profileName {
+    font-size: 1.8rem;
+  }
+  
+  .profileTitle {
+    font-size: 1.1rem;
+  }
+  
+  .galleryGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .bookReviewsGrid {
+    grid-template-columns: 1fr;
+  }
+}

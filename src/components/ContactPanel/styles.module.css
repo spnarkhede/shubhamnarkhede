@@ -1,0 +1,234 @@
+.contactPanelContainer {
+  margin: 40px 0;
+}
+
+.contactPanelTitle {
+  text-align: center;
+  margin-bottom: 8px;
+  color: var(--ifm-color-primary);
+}
+
+.contactPanelDescription {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 32px;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.contactPanelContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 24px;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfoCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInfoTitle {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--ifm-color-primary);
+}
+
+.contactInfoDescription {
+  margin-bottom: 24px;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9375rem;
+}
+
+.contactMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.contactMethod {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.contactMethodIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary-lightest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
+
+.contactMethodContent {
+  flex: 1;
+}
+
+.contactMethodTitle {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  color: var(--ifm-heading-color);
+}
+
+.contactMethodValue {
+  color: var(--ifm-color-emphasis-800);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  word-break: break-word;
+}
+
+.contactMethodValue:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.socialLinks a {
+  color: var(--ifm-color-emphasis-800);
+  text-decoration: none;
+  font-size: 0.9375rem;
+}
+
+.socialLinks a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
+.socialDivider {
+  color: var(--ifm-color-emphasis-500);
+  font-size: 0.75rem;
+}
+
+.contactLocation {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.contactLocation p {
+  margin: 0 0 8px 0;
+}
+
+.contactLocation p:last-child {
+  margin-bottom: 0;
+}
+
+.contactForm {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lighter);
+  outline: none;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submitButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submitButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contactPanelContent {
+    grid-template-columns: 1fr;
+  }
+  
+  .contactInfoCard {
+    margin-bottom: 24px;
+  }
+}
+
+/* Dark mode adjustments */
+html[data-theme='dark'] .contactInfoCard,
+html[data-theme='dark'] .contactForm {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+html[data-theme='dark'] .contactMethodIcon {
+  background-color: var(--ifm-color-primary-darkest);
+}
+
+html[data-theme='dark'] .formInput,
+html[data-theme='dark'] .formSelect,
+html[data-theme='dark'] .formTextarea {
+  border-color: var(--ifm-color-emphasis-400);
+  background-color: var(--ifm-background-color);
+}
+
+html[data-theme='dark'] .formInput:focus,
+html[data-theme='dark'] .formSelect:focus,
+html[data-theme='dark'] .formTextarea:focus {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-darker);
+}

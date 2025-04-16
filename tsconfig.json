@@ -1,0 +1,21 @@
+{
+  // This file is not used in compilation. It is here just for a nice editor experience.
+  "extends": "@docusaurus/tsconfig",
+  "compilerOptions": {
+    "module": "esnext",
+    "target": "es6",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "types": ["node"]
+  },
+  // "compilerOptions": {
+  //   "baseUrl": ".",
+  //   "strictNullChecks": true,
+  //   "skipLibCheck": true,
+  //   "types": ["node"]
+  // },
+  "include": ["src/**/*", "docs/**/*"],
+  "exclude": ["node_modules", "build", "dist"]
+}
+

@@ -1,0 +1,232 @@
+.navigationWrapper {
+  --nav-bg-color: var(--ifm-background-color);
+  --nav-text-color: var(--ifm-font-color-base);
+  --nav-primary-color: var(--ifm-color-primary);
+  --nav-primary-darker: var(--ifm-color-primary-darker);
+  --nav-emphasis-color: var(--ifm-color-emphasis-700);
+  --nav-card-bg: var(--ifm-card-background-color);
+  --nav-card-border: var(--ifm-color-emphasis-200);
+  --nav-card-shadow: rgba(0, 0, 0, 0.05);
+  --nav-card-shadow-hover: rgba(0, 0, 0, 0.1);
+} 
+
+
+.navigationGuideContainer {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--nav-bg-color);
+  background-image: radial-gradient(circle at 25% 25%, rgba(var(--ifm-color-primary-rgb), 0.05) 0%, transparent 50%),
+                    radial-gradient(circle at 75% 75%, rgba(var(--ifm-color-primary-rgb), 0.05) 0%, transparent 50%);
+  color: var(--nav-text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.guideHeader {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+
+
+.backLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--nav-primary-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--nav-primary-darker);
+  text-decoration: none;
+}
+
+.guideTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, var(--nav-primary-color) 0%, var(--nav-primary-darker) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.guideDescription {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--nav-emphasis-color);
+}
+
+.roleCardsRow {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.roleCard {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: var(--nav-card-bg);
+  border: 1px solid var(--nav-card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--nav-card-shadow);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: var(--nav-text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.roleCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px var(--nav-card-shadow-hover);
+  border-color: var(--nav-primary-color);
+  text-decoration: none;
+  color: var(--nav-text-color);
+}
+
+.roleCardIcon {
+  background: linear-gradient(135deg, var(--nav-primary-color) 0%, var(--nav-primary-darker) 100%);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.roleCardIcon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.roleCardContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.roleTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: var(--nav-text-color);
+}
+
+.roleDescription {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--nav-emphasis-color);
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.roleCardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  color: var(--nav-primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.viewProfileText {
+  transition: transform 0.3s ease;
+}
+
+.roleCard:hover .viewProfileText {
+  transform: translateX(-3px);
+}
+
+.roleCard:hover .roleCardFooter svg {
+  transform: translateX(3px);
+}
+
+.roleCardFooter svg {
+  transition: transform 0.3s ease;
+}
+
+.guideFooter {
+  text-align: center;
+  max-width: 700px;
+}
+
+.guideNote {
+  font-size: 0.95rem;
+  color: var(--nav-emphasis-color);
+  font-style: italic;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .roleCardsRow {
+    gap: 1rem;
+  }
+  
+  .roleCard {
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .roleCardsRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .roleCard {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .guideTitle {
+    font-size: 2rem;
+  }
+  
+  .guideDescription {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigationGuideContainer {
+    padding: 1.5rem;
+  }
+  
+  .guideHeader {
+    margin-top: 2rem;
+  }
+  
+  .backLink {
+    position: relative;
+    margin-bottom: 2rem;
+    display: inline-flex;
+  }
+  
+  .guideTitle {
+    font-size: 1.8rem;
+  }
+  
+  .guideDescription {
+    font-size: 1rem;
+  }
+}

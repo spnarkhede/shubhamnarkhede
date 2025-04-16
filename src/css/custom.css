@@ -1,0 +1,245 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+@import './_aboutme';
+@import './_certificates.css';
+@import './_timeline.css';
+@import './_projects.css';
+@import './_books.css';
+@import './_contact.css';
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3a6ea5;
+  --ifm-color-primary-dark: #346294;
+  --ifm-color-primary-darker: #315c8c;
+  --ifm-color-primary-darkest: #284c73;
+  --ifm-color-primary-light: #407ab6;
+  --ifm-color-primary-lighter: #4980bc;
+  --ifm-color-primary-lightest: #6393c7;
+  
+  --ifm-color-secondary: #f0b429;
+  --ifm-color-secondary-dark: #e9a814;
+  --ifm-color-secondary-darker: #dc9f13;
+  --ifm-color-secondary-darkest: #b58210;
+  --ifm-color-secondary-light: #f2bd42;
+  --ifm-color-secondary-lighter: #f3c14f;
+  --ifm-color-secondary-lightest: #f5cf77;
+  
+  --ifm-color-success: #00a676;
+  --ifm-color-info: #54c5eb;
+  --ifm-color-warning: #ffb703;
+  --ifm-color-danger: #ef476f;
+  
+  --ifm-code-font-size: 95%;
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --ifm-heading-font-family: 'Poppins', var(--ifm-font-family-base);
+  --ifm-navbar-height: 4.5rem;
+  --ifm-navbar-padding-vertical: 0.75rem;
+  --ifm-navbar-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.05);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #4d8ece;
+  --ifm-color-primary-dark: #3680c7;
+  --ifm-color-primary-darker: #3279bc;
+  --ifm-color-primary-darkest: #29639b;
+  --ifm-color-primary-light: #649cd5;
+  --ifm-color-primary-lighter: #71a5d9;
+  --ifm-color-primary-lightest: #93bce3;
+  
+  --ifm-color-secondary: #ffc233;
+  --ifm-color-secondary-dark: #ffba14;
+  --ifm-color-secondary-darker: #ffb504;
+  --ifm-color-secondary-darkest: #d59500;
+  --ifm-color-secondary-light: #ffca52;
+  --ifm-color-secondary-lighter: #ffcf61;
+  --ifm-color-secondary-lightest: #ffdd90;
+  
+  --ifm-background-color: #1a1a2e;
+  --ifm-background-surface-color: #222244;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+}
+
+/* Global styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-feature-settings: "kern", "liga", "calt";
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Navbar styling */
+.navbar {
+  box-shadow: var(--ifm-navbar-shadow);
+}
+
+.navbar__brand {
+  font-family: var(--ifm-heading-font-family);
+  font-weight: 600;
+}
+
+.navbar__logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.navbar__logo:hover {
+  transform: scale(1.05);
+}
+
+/* Hero section styling */
+.hero {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__title {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  opacity: 0.8;
+}
+
+/* Card styling */
+.card {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+.footer {
+  padding: 3rem 0;
+}
+
+.footer__link-item {
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  text-decoration: none;
+}
+
+.footer__copyright {
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+/* Button styling */
+.button {
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+}
+
+.button--secondary {
+  background-color: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-secondary);
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-800);
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 996px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+  
+  .hero__subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Animation utilities */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Timeline styling will be in _timeline.css */
+/* Projects styling will be in _projects.css */
