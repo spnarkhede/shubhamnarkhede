@@ -3,7 +3,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import { ExperienceTimeline } from '@site/src/components/ExperienceTimeline';
-import { Briefcase, GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
+import { Award, Calendar } from 'lucide-react';
 
 export default function Experience() {
   const skills = [

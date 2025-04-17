@@ -2,7 +2,7 @@ import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import styles from './styles.module.css';
-import { GitHub, ExternalLink } from 'lucide-react';
+import { GitHub } from 'lucide-react';
 
 export default function TechEnthusiastCodeSamples() {
   const codeSnippets = [

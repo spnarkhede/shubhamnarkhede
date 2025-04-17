@@ -2,7 +2,7 @@ import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import styles from './styles.module.css';
-import { Book, Video, Link as LinkIcon, Globe } from 'lucide-react';
+import { Book, Video, Globe } from 'lucide-react';
 
 export default function TechEnthusiastResources() {
   const resources = {

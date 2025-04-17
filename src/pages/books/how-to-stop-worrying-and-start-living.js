@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
-import { ArrowLeft, ArrowRight, Calendar, Clock, Star, Tag } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calendar, Clock } from 'lucide-react';
 
 export default function HowToStopWorryingReview() {
   return (
