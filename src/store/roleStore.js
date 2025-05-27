@@ -31,8 +31,8 @@ const useRoleStore = create((set) => ({
       theme: 'light',
       tabs: [
         { id: 'introduction', label: 'Introduction' },
-        { id: 'resume', label: 'Resume Download' },
         { id: 'experience', label: 'Experience' },
+        { id: 'resume', label: 'Resume Download' },
         { id: 'skills', label: 'Skills & Certifications' },
         { id: 'recommendations', label: 'Recommendations' },
         { id: 'projects', label: 'Projects' },
