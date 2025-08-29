@@ -1,0 +1,322 @@
+.introductionContent {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.profileImageContainer {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ifm-color-primary-lighter);
+}
+
+.profileDescription {
+  flex: 1;
+}
+
+.leadParagraph {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.techHighlights {
+  margin: 2rem 0;
+}
+
+.highlightsTitle {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content);
+}
+
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.techItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.techItem svg {
+  color: var(--ifm-color-primary);
+  flex-shrink: 0;
+}
+
+.techItem h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.techItem p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.primaryButton:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: var(--ifm-color-primary) !important;
+  text-decoration: none !important;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.secondaryButton:hover {
+  background: var(--ifm-color-primary);
+  color: white !important;
+}
+
+.philosophySection {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem 0;
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.philosophyCard {
+  background: var(--ifm-background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.philosophyCard h3 {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  font-size: 1.1rem;
+}
+
+.focusAreasSection {
+  text-align: center;
+}
+
+.focusText {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.focusButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nextStepButton {
+  padding: 0.75rem 1.25rem;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content) !important;
+  text-decoration: none !important;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+.nextStepButton:hover {
+  background: var(--ifm-color-primary);
+  color: white !important;
+  border-color: var(--ifm-color-primary);
+}
+
+/* Code Samples Styles */
+.codeSamplesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.codeCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--ifm-global-shadow-lw);
+}
+
+.codeCardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.codeCardTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.codeCardTitle h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--ifm-color-content);
+}
+
+.codeCardActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.copyButton,
+.githubLink,
+.demoLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-content-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.copyButton:hover,
+.githubLink:hover,
+.demoLink:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.codeDescription {
+  margin-bottom: 1rem;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.5;
+}
+
+.codeTags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.codeTag {
+  padding: 0.25rem 0.75rem;
+  background: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darker);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.codeBlock {
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.codeContent {
+  margin: 0;
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.moreExamplesSection {
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.moreExamplesText {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-content-secondary);
+}
+
+.moreExamplesButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .introductionContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .techGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .philosophyGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ctaButtons {
+    justify-content: center;
+  }
+  
+  .focusButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
