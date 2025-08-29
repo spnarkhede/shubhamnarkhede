@@ -55,7 +55,7 @@ const RecommendationCard = ({ recommendation }) => {
   );
 };
 
-const RecommendationsPanel = ({ recommendations = sampleRecommendations, className }) => {
+const RecommendationsPanel = ({ recommendations = professionalRecommendations, className }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
@@ -151,7 +151,7 @@ const RecommendationsPanel = ({ recommendations = sampleRecommendations, classNa
 };
 
 // Sample data
-const sampleRecommendations = [
+const professionalRecommendations = [
   {
     name: "Edgar Koepplin",
     title: "Director Area Sales & Global Distribution Partner Management for Mobile Hydraulics & Digital Sales E2E Process Owner at BOSCH REXROTH AG",
@@ -172,7 +172,7 @@ const sampleRecommendations = [
   },
   {
     name: "Selin Kelles",
-    title: "Requirements Management",
+    title: "Program Manager at Bosch Rexroth AG",
     image: "/img/testimonials/selin.jpg",
     quote: "Shubham is a great developer with great skills. He has impressed all the team with his passion for his projects and ability to do everything possible to reach the goal. His help to his colleagues is impressive as well. He developed tools that strongly impact our Bosch Rexroth industry, which is great. His motivation everyday is strong and he has the strength to motivate people around him, which is amazing. He's a great colleague and friend at the same time, and I wish him all the best!",
     rating: 5,
@@ -186,11 +186,20 @@ const sampleRecommendations = [
     quote: "I am impressed with Mr. Shubham Narkhede's ability to program software, his knowledge of DevOps tools, and his advanced communication skills, which he uses to his advantage when presenting to customers and colleagues. Shubham Narkhede has done a great job expanding Bosch Rexroth AG's presence in terms of software and application development for the Sales and Distribution division. He also diligently ensures that his KPIs are updated and tracked, which helped me understand what was going well and what was not. His expertise as a software engineer is considerable and has helped our team find more efficient solutions and develop various projects. His contributions such as blogs, resources, information, documentation and helpfulness have been very valuable to the community. He is a very focused and analytical person and can add value to any team he is a part of. His energy to push things forward was contagious and helped us achieve great goals. I highly recommend Shubham as a software engineer and would love to work with him again. I am sure Shubham will achieve great things in his career.",
     rating: 5,
     date: "April 2022",
-    relationship: "Direct Manager"
+    relationship: "Team Administrtor"
+  },
+  {
+    name: "Dr. Neeranjan Chitare",
+    title: "Birmingham City University | Lecturer & Expert Fellow SPRITE+",
+    image: "/img/testimonials/neeranjan.jpg",
+    quote: "Shubham was my student during his graduation (2014-18). Given any assignment to him, he does it in the best possible way and always before time. His passion for learning will definitely boost his graph of growing. He is equally enthusiastic to work with and help his teammates. His acute interest in arts gives him an additional edge. I am sure he can confidently handle the research as well as professional portfolio in the best manner.",
+    rating: 5,
+    date: "May 2018",
+    relationship: "Professor"
   },
   {
     name: "Ashwini Borle",
-    title: "Technical Product Manager | Data Engineer | QA | DevOps | Azure",
+    title: "Senior Technical Product Manager at Mastercard",
     image: "/img/testimonials/ashwini.jpg",
     quote: "Shubham is a positive thinker, self motivated and has a lot of software skills. He has done several web development projects. He is good in arts, full with passion, enthusiasm and positive attitude. Completes all his work before time. He is the perfect candidate to hire. Wish you best of luck!!",
     rating: 5,
@@ -208,7 +217,7 @@ const sampleRecommendations = [
   },
   {
     name: "Anup Borle",
-    title: "DevOps | GCP | Docker | K8s | CI/CD | Jenkins | Ansible",
+    title: "DevOps Engineer at Deutsche Bank",
     image: "/img/testimonials/anup.jpg",
     quote: "Mr. Shubham is motivated, forward thinking and highly talented individual with lots of knowledge in his field. His unmatched skills and ingenuity makes him a perfect candidate for anyone who is open to hire and want to take an enthusiastic and energetic person by their side.",
     rating: 5,
@@ -217,21 +226,12 @@ const sampleRecommendations = [
   },
   {
     name: "Akshay Saraf",
-    title: "Ph.D. Scholar at VNIT Nagpur",
+    title: "Doctoral Researcher | Ph.D. Scholar at VNIT Nagpur",
     image: "/img/testimonials/akshay.jpg",
     quote: "Shubham is one of my talented and hardworking students. He always strives to achieve set target on time. He worked under me on a Mini Project based on Java Language. I wish him Luck for future endeavors.",
     rating: 5,
     date: "May 2018",
-    relationship: "Teacher"
-  },
-  {
-    name: "Dr. Neeranjan Chitare",
-    title: "Birmingham City University | Expert Fellow SPRITE+",
-    image: "/img/testimonials/neeranjan.jpg",
-    quote: "Shubham was my student during his graduation (2014-18). Given any assignment to him, he does it in the best possible way and always before time. His passion for learning will definitely boost his graph of growing. He is equally enthusiastic to work with and help his teammates. His acute interest in arts gives him an additional edge. I am sure he can confidently handle the research as well as professional portfolio in the best manner.",
-    rating: 5,
-    date: "May 2018",
-    relationship: "Teacher"
+    relationship: "Professor"
   }
 ];
 
