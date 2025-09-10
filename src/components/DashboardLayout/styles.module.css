@@ -82,13 +82,55 @@
   z-index: 10;
 }
 
-.dashboardNavContent {
-  display: flex;
+.navContainer {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.navArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-background-color) 0%, var(--ifm-background-color) 70%, transparent 100%);
+  border: none;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.navArrowLeft {
+  background: linear-gradient(90deg, var(--ifm-background-color) 30%, transparent 100%);
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.navArrowRight {
+  background: linear-gradient(-90deg, var(--ifm-background-color) 30%, transparent 100%);
+  border-left: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.navArrow:hover {
+  color: var(--ifm-color-primary);
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.navArrow:active {
+  color: var(--ifm-color-primary-dark);
+}
+
+.dashboardNavContent {
+  display: flex;
   overflow-x: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+  flex: 1;
+  scroll-behavior: smooth;
 }
 
 .dashboardNavContent::-webkit-scrollbar {
@@ -103,6 +145,7 @@
   transition: all 0.3s ease;
   white-space: nowrap;
   border-bottom: 3px solid transparent;
+  flex-shrink: 0;
 }
 
 .dashboardNavItem:hover {
@@ -141,6 +184,10 @@
     font-size: 1.1rem;
   }
   
+  .navArrow {
+    width: 35px;
+  }
+  
   .dashboardNavItem {
     padding: 0.8rem 1.2rem;
     font-size: 0.9rem;
@@ -164,6 +211,10 @@
     font-size: 1rem;
   }
   
+  .navArrow {
+    width: 30px;
+  }
+  
   .dashboardNavItem {
     padding: 0.7rem 1rem;
     font-size: 0.85rem;
@@ -172,4 +223,42 @@
   .dashboardContentInner {
     padding: 1rem;
   }
+}
+
+/* Enhanced visual indicators for arrow buttons */
+.navArrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.navArrowLeft::before {
+  right: 0;
+}
+
+.navArrowRight::before {
+  left: 0;
+}
+
+/* Add subtle animation for better UX */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navArrowLeft {
+  animation: fadeIn 0.3s ease;
+}
+
+.navArrowRight {
+  animation: fadeIn 0.3s ease;
 }

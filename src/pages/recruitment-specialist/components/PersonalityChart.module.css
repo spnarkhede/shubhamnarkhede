@@ -1,0 +1,283 @@
+/* PersonalityChart.module.css */
+.chartContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.personalityGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.traitCard {
+  background-color: var(--ifm-card-background-color);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.traitCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--trait-color), color-mix(in srgb, var(--trait-color) 70%, white));
+}
+
+.traitCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--trait-color);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  min-width: 0;
+}
+
+.traitIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  background: color-mix(in srgb, var(--trait-color) 15%, transparent);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.headerContent {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.traitName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: var(--ifm-color-emphasis-900);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortDescription {
+  font-size: 0.9rem;
+  color: var(--trait-color);
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.scoreCircle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--trait-color), color-mix(in srgb, var(--trait-color) 80%, white));
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--trait-color) 30%, transparent);
+}
+
+.scoreValue {
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.progressSection {
+  margin-bottom: 1.5rem;
+}
+
+.progressBarContainer {
+  position: relative;
+}
+
+.progressBar {
+  height: 8px;
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  width: var(--progress, 0%);
+  background: linear-gradient(90deg, var(--trait-color), color-mix(in srgb, var(--trait-color) 85%, white));
+  border-radius: 8px;
+  transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.cardContent {
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  padding-top: 1.5rem;
+}
+
+.traitDescription {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.professionalValue {
+  background: var(--ifm-color-emphasis-100);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--trait-color);
+  position: relative;
+}
+
+.professionalValue strong {
+  display: block;
+  color: var(--ifm-color-emphasis-900);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.professionalValue span {
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .personalityGrid {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .traitCard {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chartContainer {
+    padding: 1rem 0;
+  }
+  
+  .personalityGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .traitCard {
+    padding: 1.25rem;
+  }
+  
+  .cardHeader {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .traitName {
+    white-space: normal;
+    text-align: center;
+  }
+  
+  .scoreCircle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .scoreValue {
+    font-size: 0.9rem;
+  }
+  
+  .traitName {
+    font-size: 1.2rem;
+  }
+  
+  .professionalValue {
+    padding: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .traitCard {
+    padding: 1rem;
+  }
+  
+  .traitIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  
+  .scoreCircle {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .traitName {
+    font-size: 1.1rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .shortDescription {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ensure 3 cards per row on larger screens */
+@media (min-width: 1200px) {
+  .personalityGrid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .personalityGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

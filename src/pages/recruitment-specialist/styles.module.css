@@ -2076,3 +2076,337 @@ html[data-theme='dark'] .certificateVerifyLink:hover {
     font-size: 0.9rem;
   }
 }
+
+/* Personality Insights Styles */
+.personalityIntro {
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.introText {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.assessmentMeta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  background: var(--ifm-color-emphasis-100);
+  padding: 2rem;
+  border-radius: 16px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.metaItem {
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-card-background-color);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.metaItem strong {
+  color: var(--ifm-color-primary);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.insightCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.insightCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color, #4F46E5), color-mix(in srgb, var(--accent-color, #4F46E5) 70%, white));
+}
+
+.insightCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color, #4F46E5);
+}
+
+.insightIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--accent-color, #4F46E5), color-mix(in srgb, var(--accent-color, #4F46E5) 80%, white));
+  color: white;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--accent-color, #4F46E5) 30%, transparent);
+}
+
+.insightTitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.insightDescription {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.recruiterSection {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recruiterGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.recruiterCard {
+  background: var(--ifm-card-background-color);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.recruiterCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-light));
+}
+
+.recruiterCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-color: var(--ifm-color-primary);
+}
+
+.recruiterCardTitle {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recruiterCardText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+.scoreHighlight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 10px;
+  border-left: 4px solid var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.scoreLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 500;
+}
+
+.scoreValue {
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+  background: var(--ifm-color-primary-lightest);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.recruiterSummary {
+  background: var(--ifm-color-emphasis-100);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.summaryTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--ifm-color-emphasis-900);
+  text-align: center;
+}
+
+.summaryContent p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.summaryContent strong {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+/* Responsive Design for Personality Section */
+@media (max-width: 1024px) {
+  .insightsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .recruiterGrid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .personalityIntro {
+    margin-bottom: 2rem;
+  }
+  
+  .assessmentMeta {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .metaItem {
+    padding: 0.75rem;
+  }
+  
+  .insightsGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .insightCard {
+    padding: 1.5rem;
+  }
+  
+  .insightIcon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .recruiterGrid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .recruiterCard {
+    padding: 1.5rem;
+  }
+  
+  .recruiterSummary {
+    padding: 2rem;
+  }
+  
+  .summaryTitle {
+    font-size: 1.25rem;
+  }
+  
+  .scoreHighlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+  }
+  
+  .scoreValue {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .introText {
+    font-size: 1rem;
+  }
+  
+  .assessmentMeta {
+    padding: 1rem;
+  }
+  
+  .insightCard {
+    padding: 1.25rem;
+  }
+  
+  .insightTitle {
+    font-size: 1.2rem;
+  }
+  
+  .insightDescription {
+    font-size: 0.9rem;
+  }
+  
+  .recruiterCard {
+    padding: 1.25rem;
+  }
+  
+  .recruiterCardTitle {
+    font-size: 1.1rem;
+  }
+  
+  .recruiterCardText {
+    font-size: 0.9rem;
+  }
+  
+  .recruiterSummary {
+    padding: 1.5rem;
+  }
+}
+
+/* Ensure proper grid layouts on larger screens */
+@media (min-width: 1200px) {
+  .insightsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .recruiterGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
