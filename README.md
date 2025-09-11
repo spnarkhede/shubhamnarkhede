@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Portfolio Website Enhancement Implementation Guide
 
 ## Overview
@@ -125,6 +126,8 @@ If you encounter any issues during implementation, please refer to:
 - The enhancement plan document for detailed design decisions
 
 
+=======
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
 # shubhamnarkhede
 High-performing IT professional with over 5 years of experience in DevOps, full-stack development, and UI/UX design. Passionate about creating efficient, scalable, and user-friendly solutions.
 
@@ -270,6 +273,7 @@ If you encounter any issues implementing these components, please refer to:
 ## Conclusion
 
 This landing page system provides a professional, role-based experience for your portfolio visitors. By following these implementation instructions, you'll create a personalized journey for different audience types while showcasing your technical skills, professional experience, and creative work.
+<<<<<<< HEAD
 
 
 
@@ -354,3 +358,5 @@ Based on the analysis of the existing repository and the new requirements, here 
 - **Action**: Create comprehensive documentation
 
 These improvement areas will guide the development of a detailed enhancement plan to transform the existing portfolio into the required role-based structure.
+=======
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2

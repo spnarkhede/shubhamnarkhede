@@ -1,17 +1,32 @@
+<<<<<<< HEAD
 import type { Config, ThemeConfig } from '@docusaurus/types';
 import type { Options } from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
 import ci from 'ci-info';
 
 
+=======
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
+import type * as Preset from '@docusaurus/preset-classic';
+import ci from 'ci-info';
+
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
 const config: Config = {
   title: 'Shubham Narkhede | Portfolio',
   tagline: 'DevOps Engineer & Full Stack Developer',
   favicon: 'img/favicon.ico',
+<<<<<<< HEAD
   url: 'https://shubhamnarkhede.vercel.app',
   baseUrl: ci.GITHUB_ACTIONS ? '/portfolio/' : '/',
   organizationName: 'spnarkhede',
   projectName: 'shubhamnarkhede',
+=======
+  url: 'https://spnarkhede.github.io',
+  baseUrl: ci.GITHUB_ACTIONS ? '/portfolio/' : '/',
+  organizationName: 'spnarkhede',
+  projectName: 'portfolio-spnarkhede',
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
   i18n: {
@@ -27,14 +42,22 @@ const config: Config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.ts'),
+<<<<<<< HEAD
           editUrl: 'https://github.com/spnarkhede/shubhamnarkhede',
+=======
+          editUrl: 'https://github.com/spnarkhede/professional-portal/',
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
         },
         blog: {
           showReadingTime: true,
           onUntruncatedBlogPosts: 'ignore',
+<<<<<<< HEAD
           editUrl: 'https://github.com/spnarkhede/shubhamnarkhede/tree/main/blog',
+=======
+          editUrl: 'https://github.com/spnarkhede/professional-portal/tree/main/blog',
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
           blogSidebarTitle: 'Recent Posts',
           blogSidebarCount: 10,
           postsPerPage: 5,
@@ -74,14 +97,39 @@ const config: Config = {
     },
     navbar: {
       title: 'Shubham Narkhede',
+<<<<<<< HEAD
       logo: { alt: 'Shubham Narkhede', src: 'img/profile.png' },
+=======
+      logo: {
+        alt: 'Shubham Narkhede',
+        src: 'img/profile.png',
+      },
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
       items: [
         { to: '/intro', label: 'About Me', position: 'left' },
         { to: '/Portfolio/Resume', label: 'Resume', position: 'left' },
         { to: '/books', label: 'Books', position: 'left' },
+<<<<<<< HEAD
         { to: '/Portfolio/Projects', label: 'Projects', position: 'left' },
         { to: '/Portfolio/Experience', label: 'Experience', position: 'left' },
         { to: '/articles', label: 'Tech Articles', position: 'left' },
+=======
+        { 
+          to: '/Portfolio/Projects', 
+          label: 'Projects', 
+          position: 'left',
+        },
+        { 
+          to: '/Portfolio/Experience', 
+          label: 'Experience', 
+          position: 'left',
+        },
+        { 
+          to: '/articles', 
+          label: 'Tech Articles', 
+          position: 'left',
+        },
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'right' },
         { href: 'https://github.com/spnarkhede', label: 'GitHub', position: 'right' },
@@ -126,8 +174,12 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
       additionalLanguages: ['java', 'kotlin', 'bash', 'typescript', 'scss'],
     },
+<<<<<<< HEAD
   } as ThemeConfig,
 
+=======
+  } satisfies Preset.ThemeConfig,
+>>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
 };
 
 export default config;
