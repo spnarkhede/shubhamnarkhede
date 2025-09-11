@@ -101,28 +101,28 @@ export default function RecruitmentSpecialistIntroduction() {
           <div className={styles.statusCard}>
             <h3 className={styles.statusTitle}>Work Permit Status</h3>
             <p className={styles.statusText}>
-              I currently hold a valid work permit for the United States and am authorized to work for any employer.
+              EU Blue Card holder in Germany, settlement permit in process. Fully authorized to work for any employer.
             </p>
           </div>
           
           <div className={styles.statusCard}>
             <h3 className={styles.statusTitle}>Availability</h3>
             <p className={styles.statusText}>
-              I am available for new opportunities with a notice period of 2 weeks.
+              Open to new opportunities with a 2-month's notice period.
             </p>
           </div>
           
           <div className={styles.statusCard}>
             <h3 className={styles.statusTitle}>Preferred Work Model</h3>
             <p className={styles.statusText}>
-              I am open to both remote and on-site positions, with a preference for hybrid arrangements.
+              Open to remote, hybrid and on-site roles, with a preference for hybrid arrangements.
             </p>
           </div>
           
           <div className={styles.statusCard}>
             <h3 className={styles.statusTitle}>Relocation</h3>
             <p className={styles.statusText}>
-              I am willing to relocate for the right opportunity, particularly to tech hubs.
+              Willing to relocate for the right opportunity, particularly to major tech hubs.
             </p>
           </div>
         </div>

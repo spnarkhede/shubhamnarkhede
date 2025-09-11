@@ -1,8 +1,8 @@
 <<<<<<< HEAD
 import type { Config, ThemeConfig } from '@docusaurus/types';
-import type { Options } from '@docusaurus/preset-classic';
 import { themes as prismThemes } from 'prism-react-renderer';
-import ci from 'ci-info';
+import type * as Preset from '@docusaurus/preset-classic';
+import * as ciInfo from 'ci-info';
 
 
 =======
@@ -18,7 +18,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 <<<<<<< HEAD
   url: 'https://shubhamnarkhede.vercel.app',
-  baseUrl: ci.GITHUB_ACTIONS ? '/portfolio/' : '/',
+  baseUrl: ciInfo.GITHUB_ACTIONS ? '/portfolio/' : '/',
   organizationName: 'spnarkhede',
   projectName: 'shubhamnarkhede',
 =======
@@ -106,6 +106,7 @@ const config: Config = {
       },
 >>>>>>> af53f70b4ac267b15b52934d55cef4392fcd3dd2
       items: [
+        { to: '/navigation-guide', label: 'Home', position: 'left' },
         { to: '/intro', label: 'About Me', position: 'left' },
         { to: '/Portfolio/Resume', label: 'Resume', position: 'left' },
         { to: '/books', label: 'Books', position: 'left' },

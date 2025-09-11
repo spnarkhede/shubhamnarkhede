@@ -3,7 +3,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import { SkillsMatrix } from '../../components/SkillsMatrix';
 import styles from './styles.module.css';
-import { Award, CheckCircle } from 'lucide-react';
+import { Award, CheckCircle, Globe } from 'lucide-react';
 
 export default function RecruitmentSpecialistSkills() {
   const skills = {
@@ -38,6 +38,97 @@ export default function RecruitmentSpecialistSkills() {
       { name: "Mentoring", level: 4 }
     ]
   };
+
+  const languages = [
+    {
+      name: "English",
+      proficiency: "Professional Working",
+      level: "C1/C2",
+      description: "Fluent in business and technical communication",
+      context: "Daily work language, technical documentation, presentations",
+      flag: "🇬🇧"
+    },
+    {
+      name: "German",
+      proficiency: "Intermediate",
+      level: "B1",
+      description: "Conversational level with ongoing improvement",
+      context: "Living and working in Germany, local interactions",
+      flag: "🇩🇪"
+    },
+    {
+      name: "Hindi",
+      proficiency: "Native",
+      level: "Native",
+      description: "Native fluency in speaking and writing",
+      context: "Personal communication, cultural context",
+      flag: "🇮🇳"
+    },
+    {
+      name: "Marathi",
+      proficiency: "Native (Mother Tongue)",
+      level: "Native",
+      description: "Mother tongue with complete fluency",
+      context: "Family communication, regional cultural context",
+      flag: "🇮🇳"
+    },
+    {
+      name: "Punjabi",
+      proficiency: "Basic Understanding",
+      level: "A2",
+      description: "Understanding of spoken language",
+      context: "Regional communication, cultural awareness",
+      flag: "🇮🇳"
+    },
+    {
+      name: "Sanskrit",
+      proficiency: "Academic Level",
+      level: "B1",
+      description: "Reading, writing, and listening comprehension with basic speaking",
+      context: "Religious texts, cultural studies, academic research",
+      flag: "🇮🇳"
+    },
+    {
+      name: "Urdu",
+      proficiency: "Conversational",
+      level: "B1",
+      description: "Speaking and listening skills",
+      context: "Cultural communication, poetry appreciation",
+      flag: "🇵🇰"
+    },
+    {
+      name: "Bengali",
+      proficiency: "Basic Understanding",
+      level: "A2",
+      description: "Understanding of spoken language",
+      context: "Regional interactions, cultural awareness",
+      flag: "🇧🇩"
+    },
+    {
+      name: "Gujarati",
+      proficiency: "Proficient",
+      level: "B2",
+      description: "Reading, writing, listening, and speaking skills",
+      context: "Business communication, regional interactions",
+      flag: "🇮🇳"
+    },
+    {
+      name: "Nepali",
+      proficiency: "Basic Understanding",
+      level: "A2",
+      description: "Understanding of spoken language",
+      context: "Regional communication, cultural awareness",
+      flag: "🇳🇵"
+    },
+    {
+      name: "Konkani",
+      proficiency: "Basic Understanding",
+      level: "A2",
+      description: "Understanding of spoken language",
+      context: "Regional communication, cultural heritage",
+      flag: "🇮🇳"
+    }
+  ];
 
   const certifications = [
     {
@@ -94,6 +185,41 @@ export default function RecruitmentSpecialistSkills() {
         subtitle="Overview of my technical skills and expertise levels"
       >
         <SkillsMatrix skills={skills} />
+      </SectionTemplate>
+
+      <SectionTemplate
+        title="Language Proficiency"
+        subtitle="Multilingual communication abilities for global collaboration"
+        className={styles.languagesSection}
+      >
+        <div className={styles.languagesGrid}>
+          {languages.map((language, index) => (
+            <div key={index} className={styles.languageCard}>
+              <div className={styles.languageHeader}>
+                <div className={styles.languageFlag}>
+                  {language.flag}
+                </div>
+                <div className={styles.languageHeaderContent}>
+                  <h3 className={styles.languageName}>{language.name}</h3>
+                  <div className={styles.languageLevel}>
+                    <Globe size={16} />
+                    <span>{language.level}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className={styles.languageBody}>
+                <div className={styles.languageProficiency}>
+                  <strong>{language.proficiency}</strong>
+                </div>
+                <p className={styles.languageDescription}>{language.description}</p>
+                <div className={styles.languageContext}>
+                  <em>Usage: {language.context}</em>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </SectionTemplate>
 
       <SectionTemplate

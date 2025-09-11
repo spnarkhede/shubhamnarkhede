@@ -1,39 +1,59 @@
-import React, { useState } from 'react';
+import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
+import { ContactForm } from '@site/src/components/ContactForm';
+import { Mail, Linkedin, Github, MapPin, Phone, Calendar, Clock } from 'lucide-react';
 import styles from './styles.module.css';
-import { Mail, Phone, MapPin, Linkedin, GitHub, Twitter, Send } from 'lucide-react';
 
 export default function RecruitmentSpecialistContact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    subject: 'job-opportunity',
-    message: '',
-  });
+  const contactMethods = [
+    {
+      icon: <Mail size={20} />,
+      title: "Email",
+      value: "shubhamnarkhede@gmail.com",
+      link: "mailto:shubhamnarkhede@gmail.com",
+      description: "Best for detailed inquiries and formal communication"
+    },
+    {
+      icon: <Linkedin size={20} />,
+      title: "LinkedIn",
+      value: "linkedin.com/in/spnarkhede",
+      link: "https://linkedin.com/in/spnarkhede",
+      description: "Professional networking and quick messages"
+    },
+    {
+      icon: <Github size={20} />,
+      title: "GitHub",
+      value: "github.com/spnarkhede",
+      link: "https://github.com/spnarkhede",
+      description: "View my code repositories and contributions"
+    },
+    {
+      icon: <Phone size={20} />,
+      title: "Phone",
+      value: "+49 171 510 8059",
+      link: "tel:+4917151080592",
+      description: "Available for scheduled calls and urgent matters"
+    },
+    {
+      icon: <MapPin size={20} />,
+      title: "Location",
+      value: "Stuttgart, Germany",
+      link: null,
+      description: "Open to remote work and relocation opportunities"
+    }
+  ];
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // In a real implementation, this would send the form data to a backend
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      subject: 'job-opportunity',
-      message: '',
-    });
+  const availability = {
+    status: "Open to New Opportunities",
+    details: [
+      "Available for immediate start",
+      "Open to remote, hybrid, or on-site positions",
+      "Willing to relocate for the right opportunity",
+      "Seeking full-time employment"
+    ],
+    timeZone: "Central European Time (CET/CEST)",
+    responseTime: "Within 24 hours for all inquiries"
   };
 
   return (
@@ -41,246 +61,137 @@ export default function RecruitmentSpecialistContact() {
       role="recruitment-specialist"
       activeTab="contact"
       title="Recruitment Specialist | Contact"
-      description="Get in touch with Shubham Narkhede about job opportunities and collaborations"
+      description="Get in touch with Shubham Narkhede for recruitment opportunities and professional inquiries"
     >
       <SectionTemplate
-        title="Contact Information"
-        subtitle="Reach out to discuss job opportunities or collaborations"
+        title="Let's Connect"
+        subtitle="Ready to discuss opportunities and answer your questions"
       >
-        <div className={styles.contactSection}>
-          <div className={styles.contactInfo}>
-            <div className={styles.contactCard}>
-              <div className={styles.contactIconContainer}>
-                <Mail size={24} className={styles.contactIcon} />
-              </div>
-              <div className={styles.contactDetails}>
-                <h3 className={styles.contactMethod}>Email</h3>
-                <a href="mailto:contact@shubhamnarkhede.com" className={styles.contactLink}>
-                  contact@shubhamnarkhede.com
-                </a>
-                <p className={styles.contactNote}>Preferred for initial contact</p>
-              </div>
+        <div className={styles.contactIntro}>
+          <p>
+            Thank you for your interest in my profile. I'm actively seeking new opportunities 
+            and would be delighted to discuss how my skills and experience can contribute to your team's success. 
+            I respond to all professional inquiries promptly and thoroughly.
+          </p>
+        </div>
+
+        {/* Availability Status */}
+        <div className={styles.availabilitySection}>
+          <div className={styles.availabilityHeader}>
+            <div className={styles.availabilityStatus}>
+              <div className={styles.statusIndicator}></div>
+              <h3>{availability.status}</h3>
             </div>
-            
-            <div className={styles.contactCard}>
-              <div className={styles.contactIconContainer}>
-                <Phone size={24} className={styles.contactIcon} />
-              </div>
-              <div className={styles.contactDetails}>
-                <h3 className={styles.contactMethod}>Phone</h3>
-                <a href="tel:+11234567890" className={styles.contactLink}>
-                  +1 (123) 456-7890
-                </a>
-                <p className={styles.contactNote}>Available weekdays 9 AM - 5 PM EST</p>
-              </div>
-            </div>
-            
-            <div className={styles.contactCard}>
-              <div className={styles.contactIconContainer}>
-                <MapPin size={24} className={styles.contactIcon} />
-              </div>
-              <div className={styles.contactDetails}>
-                <h3 className={styles.contactMethod}>Location</h3>
-                <p className={styles.contactText}>
-                  New York, NY, United States
-                </p>
-                <p className={styles.contactNote}>Open to relocation & remote work</p>
-              </div>
-            </div>
-            
-            <div className={styles.socialLinks}>
-              <h3 className={styles.socialTitle}>Connect on Social Media</h3>
-              <div className={styles.socialButtons}>
-                <a 
-                  href="https://linkedin.com/in/shubhamnarkhede" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={styles.socialButton}
-                  aria-label="LinkedIn Profile"
-                >
-                  <Linkedin size={20} />
-                  <span>LinkedIn</span>
-                </a>
-                
-                <a 
-                  href="https://github.com/spnarkhede" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={styles.socialButton}
-                  aria-label="GitHub Profile"
-                >
-                  <GitHub size={20} />
-                  <span>GitHub</span>
-                </a>
-                
-                <a 
-                  href="https://twitter.com/shubhamnarkhede" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className={styles.socialButton}
-                  aria-label="Twitter Profile"
-                >
-                  <Twitter size={20} />
-                  <span>Twitter</span>
-                </a>
-              </div>
+            <div className={styles.availabilityMeta}>
+              <span className={styles.timeZone}>
+                <Clock size={16} />
+                {availability.timeZone}
+              </span>
             </div>
           </div>
           
-          <div className={styles.contactForm}>
-            <h3 className={styles.formTitle}>Send a Message</h3>
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formGroup}>
-                <label htmlFor="name" className={styles.formLabel}>Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className={styles.formInput}
-                  placeholder="Your name"
-                />
-              </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="email" className={styles.formLabel}>Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className={styles.formInput}
-                  placeholder="Your email address"
-                />
-              </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="company" className={styles.formLabel}>Company</label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className={styles.formInput}
-                  placeholder="Your company name"
-                />
-              </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="subject" className={styles.formLabel}>Subject</label>
-                <select
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className={styles.formSelect}
-                >
-                  <option value="job-opportunity">Job Opportunity</option>
-                  <option value="interview-request">Interview Request</option>
-                  <option value="reference-check">Reference Check</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              
-              <div className={styles.formGroup}>
-                <label htmlFor="message" className={styles.formLabel}>Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className={styles.formTextarea}
-                  placeholder="Your message"
-                  rows={5}
-                />
-              </div>
-              
-              <button type="submit" className={styles.submitButton}>
-                <Send size={16} />
-                Send Message
-              </button>
-            </form>
+          <div className={styles.availabilityDetails}>
+            <ul>
+              {availability.details.map((detail, index) => (
+                <li key={index}>{detail}</li>
+              ))}
+            </ul>
+            <p className={styles.responseTime}>
+              <strong>Response Time:</strong> {availability.responseTime}
+            </p>
           </div>
         </div>
       </SectionTemplate>
 
       <SectionTemplate
-        title="Availability & Preferences"
-        subtitle="Information about my job search status and preferences"
+        title="Contact Information"
+        subtitle="Multiple ways to reach me for your convenience"
         withBackground={true}
       >
-        <div className={styles.preferencesGrid}>
-          <div className={styles.preferenceCard}>
-            <h3 className={styles.preferenceTitle}>Current Status</h3>
-            <p className={styles.preferenceText}>
-              I am currently open to new opportunities and can start with a notice period of 2 weeks.
+        <div className={styles.contactMethodsGrid}>
+          {contactMethods.map((method, index) => (
+            <div key={index} className={styles.contactMethodCard}>
+              <div className={styles.contactMethodIcon}>
+                {method.icon}
+              </div>
+              <div className={styles.contactMethodContent}>
+                <h4 className={styles.contactMethodTitle}>{method.title}</h4>
+                {method.link ? (
+                  <a 
+                    href={method.link} 
+                    className={styles.contactMethodValue}
+                    target={method.link.startsWith('http') ? '_blank' : undefined}
+                    rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  >
+                    {method.value}
+                  </a>
+                ) : (
+                  <span className={styles.contactMethodValue}>{method.value}</span>
+                )}
+                <p className={styles.contactMethodDescription}>{method.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </SectionTemplate>
+
+      <SectionTemplate
+        title="Send Me a Message"
+        subtitle="Use the form below for detailed inquiries"
+      >
+        <div className={styles.contactFormSection}>
+          <div className={styles.formIntroduction}>
+            <p>
+              Please provide as much detail as possible about the opportunity, including:
             </p>
+            <ul className={styles.formGuidelines}>
+              <li>Company name and role details</li>
+              <li>Location and remote work options</li>
+              <li>Required skills and experience level</li>
+              <li>Timeline for the hiring process</li>
+              <li>Any specific questions about my background</li>
+            </ul>
           </div>
           
-          <div className={styles.preferenceCard}>
-            <h3 className={styles.preferenceTitle}>Role Preferences</h3>
-            <p className={styles.preferenceText}>
-              I am seeking senior-level positions in DevOps Engineering, Cloud Architecture, or Full Stack Development.
-            </p>
-          </div>
-          
-          <div className={styles.preferenceCard}>
-            <h3 className={styles.preferenceTitle}>Work Model</h3>
-            <p className={styles.preferenceText}>
-              I am open to remote, hybrid, or on-site positions, with a preference for hybrid arrangements.
-            </p>
-          </div>
-          
-          <div className={styles.preferenceCard}>
-            <h3 className={styles.preferenceTitle}>Relocation</h3>
-            <p className={styles.preferenceText}>
-              I am willing to relocate domestically or internationally for the right opportunity.
-            </p>
+          <div className={styles.contactFormContainer}>
+            <ContactForm />
           </div>
         </div>
       </SectionTemplate>
-      
+
       <SectionTemplate
-        title="Interview Scheduling"
-        subtitle="Information for recruiters about my availability for interviews"
+        title="Quick Actions"
+        centered={true}
       >
-        <div className={styles.interviewSection}>
-          <p className={styles.interviewText}>
-            I am available for interviews during the following times (Eastern Time):
+        <div className={styles.quickActionsSection}>
+          <p className={styles.quickActionsDescription}>
+            Need something specific? These quick actions might help:
           </p>
-          
-          <div className={styles.scheduleGrid}>
-            <div className={styles.scheduleDay}>
-              <h3 className={styles.dayTitle}>Monday - Thursday</h3>
-              <p className={styles.timeSlot}>8:00 AM - 10:00 AM</p>
-              <p className={styles.timeSlot}>12:00 PM - 1:00 PM</p>
-              <p className={styles.timeSlot}>5:00 PM - 8:00 PM</p>
-            </div>
-            
-            <div className={styles.scheduleDay}>
-              <h3 className={styles.dayTitle}>Friday</h3>
-              <p className={styles.timeSlot}>8:00 AM - 10:00 AM</p>
-              <p className={styles.timeSlot}>12:00 PM - 1:00 PM</p>
-              <p className={styles.timeSlot}>4:00 PM - 6:00 PM</p>
-            </div>
-            
-            <div className={styles.scheduleDay}>
-              <h3 className={styles.dayTitle}>Weekends</h3>
-              <p className={styles.timeSlot}>By appointment only</p>
-            </div>
+          <div className={styles.quickActionsGrid}>
+            <a 
+              href="/recruitment-specialist/resume" 
+              className={styles.quickActionButton}
+            >
+              <Calendar size={20} />
+              Download Resume
+            </a>
+            <a 
+              href="https://linkedin.com/in/spnarkhede" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.quickActionButton}
+            >
+              <Linkedin size={20} />
+              Connect on LinkedIn
+            </a>
+            <a 
+              href="mailto:shubhamnarkhede@gmail.com?subject=Job%20Opportunity%20Inquiry" 
+              className={styles.quickActionButton}
+            >
+              <Mail size={20} />
+              Send Quick Email
+            </a>
           </div>
-          
-          <p className={styles.schedulingNote}>
-            For urgent interview requests or to schedule outside these times, please email me directly 
-            with the subject line "Urgent Interview Request".
-          </p>
         </div>
       </SectionTemplate>
     </DashboardLayout>

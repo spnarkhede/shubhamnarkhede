@@ -3,7 +3,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import Timeline from '../../components/Timeline';
 import styles from './styles.module.css';
-import { Briefcase, Award, Bookmark, ExternalLink } from 'lucide-react';
+import { Award, Bookmark, ExternalLink } from 'lucide-react';
 import Link from '@docusaurus/Link';
 
 export default function CuriousVisitorExperience() {

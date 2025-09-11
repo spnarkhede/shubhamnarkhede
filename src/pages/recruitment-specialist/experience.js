@@ -2,6 +2,7 @@ import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import Timeline, { TimelineItem } from '../../components/Timeline';
+import ProfessionalTimeline from './components/ProfessionalTimeline';
 import styles from './styles.module.css';
 import { Briefcase, Award, Code, Building } from 'lucide-react';
 
@@ -134,6 +135,13 @@ export default function RecruitmentSpecialistExperience() {
       title="Recruitment Specialist | Experience"
       description="Shubham Narkhede's professional experience and career timeline"
     >
+      <SectionTemplate
+        title="Professional Experience Timeline"
+        subtitle="Click on company or year to view detailed professional information."
+      >
+        <ProfessionalTimeline />
+      </SectionTemplate>
+
       <SectionTemplate
         title="Professional Experience"
         subtitle="A chronological overview of my career journey"

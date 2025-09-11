@@ -33,6 +33,7 @@
   --ifm-color-warning: #ffb703;
   --ifm-color-danger: #ef476f;
   
+  --ifm-background-color: #f8f8f8;
   --ifm-code-font-size: 95%;
   --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --ifm-heading-font-family: 'Poppins', var(--ifm-font-family-base);

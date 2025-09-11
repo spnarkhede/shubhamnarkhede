@@ -2,7 +2,7 @@ import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import styles from './styles.module.css';
-import { Star, Calendar, ArrowRight } from 'lucide-react';
+import { Star, ArrowRight } from 'lucide-react';
 import Link from '@docusaurus/Link';
 
 export default function CuriousVisitorBooks() {

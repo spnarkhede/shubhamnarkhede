@@ -2,7 +2,7 @@ import React from 'react';
 import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import styles from './styles.module.css';
-import { Book, Video, Link as LinkIcon, Globe } from 'lucide-react';
+import { Book, Video, Globe, ExternalLink } from 'lucide-react';
 
 export default function TechEnthusiastResources() {
   const resources = {
@@ -150,7 +150,7 @@ export default function TechEnthusiastResources() {
                   rel="noopener noreferrer"
                   className={styles.resourceLink}
                 >
-                  <LinkIcon size={14} />
+                  <ExternalLink size={14} />
                   View Book
                 </a>
               </div>
@@ -178,7 +178,7 @@ export default function TechEnthusiastResources() {
                   rel="noopener noreferrer"
                   className={styles.resourceLink}
                 >
-                  <LinkIcon size={14} />
+                  <ExternalLink size={14} />
                   View Course
                 </a>
               </div>
@@ -207,7 +207,7 @@ export default function TechEnthusiastResources() {
                   rel="noopener noreferrer"
                   className={styles.resourceLink}
                 >
-                  <LinkIcon size={14} />
+                  <ExternalLink size={14} />
                   Visit Site
                 </a>
               </div>
@@ -235,7 +235,7 @@ export default function TechEnthusiastResources() {
                   rel="noopener noreferrer"
                   className={styles.resourceLink}
                 >
-                  <LinkIcon size={14} />
+                  <ExternalLink size={14} />
                   Learn More
                 </a>
               </div>

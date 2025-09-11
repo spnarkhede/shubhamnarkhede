@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import { Github, Linkedin, Mail, ExternalLink, Calendar, BookOpen, Code, Award, Instagram, Globe, Headphones, FileText, FileCode } from 'lucide-react';
+import { Github, Linkedin, Mail, BookOpen, Instagram, Globe, FileText, FileCode } from 'lucide-react';
 
 export function HeroSection() {
   return (
