@@ -136,8 +136,8 @@ export default function RecruitmentSpecialistExperience() {
       description="Shubham Narkhede's professional experience and career timeline"
     >
       <SectionTemplate
-        title="Interactive Professional Development Timeline"
-        subtitle="Create, edit, and share your career journey with key milestones and achievements"
+        title="Professional Experience Timeline"
+        subtitle="Click on company or year to view detailed professional information."
       >
         <ProfessionalTimeline />
       </SectionTemplate>
