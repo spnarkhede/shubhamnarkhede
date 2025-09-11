@@ -56,7 +56,7 @@ export const workEligibility = {
 
 export const contactInfo = {
   email: "shubhamnarkhede@gmail.com",
-  phone: "+1 (555) 123-4567", // Replace with actual phone
+  phone: "+1 (555) 123-4567",
   location: "Available for Remote/Hybrid work",
   linkedin: "https://linkedin.com/in/spnarkhede",
   github: "https://github.com/spnarkhede",
@@ -71,7 +71,7 @@ export const documents = [
     fileSize: "520 KB",
     lastUpdated: "March 2024",
     primary: true,
-    downloadUrl: "/documents/resume.pdf" // This would be the actual file path
+    downloadUrl: "/documents/resume.pdf"
   },
   {
     title: "Executive Summary",
@@ -141,7 +141,7 @@ export const testimonials = [
   }
 ];
 
-// Add default export to fix build error
+// Default export required for proper Docusaurus build
 export default {
   professionalSummary,
   certifications,

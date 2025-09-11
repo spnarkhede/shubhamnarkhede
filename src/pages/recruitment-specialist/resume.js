@@ -3,7 +3,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import styles from './styles.module.css';
 import { Download, FileText, FileCheck, ExternalLink } from 'lucide-react';
-import { workEligibility, contactInfo, documents } from './content';
+import { workEligibility, contactInfo, documents } from '../../pages/recruitment-specialist/directory/content';
 
 export default function RecruitmentSpecialistResume() {
   const handleDownload = (fileName, downloadUrl) => {

@@ -3,7 +3,7 @@ import DashboardLayout from '../../components/DashboardLayout';
 import SectionTemplate from '../../components/SectionTemplate';
 import Link from '@docusaurus/Link';
 import { Github, ExternalLink, Calendar, Building2, User } from 'lucide-react';
-import { companyProjects, personalProjects } from './projectsData';
+import { companyProjects, personalProjects } from '../../pages/recruitment-specialist/directory/projectsData';
 import styles from './styles.module.css';
 
 export default function RecruitmentSpecialistProjects() {
