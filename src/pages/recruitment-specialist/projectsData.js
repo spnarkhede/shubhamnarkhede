@@ -241,3 +241,9 @@ export const personalProjects = {
     }
   ]
 };
+
+// Add default export to fix build error
+export default {
+  companyProjects,
+  personalProjects
+};

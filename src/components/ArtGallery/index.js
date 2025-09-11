@@ -8,15 +8,19 @@ const ArtGallery = ({ artworks = [] }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const [currentArtwork, setCurrentArtwork] = useState(null);
 
-  // Extract unique categories from artworks
-  const categories = ['all', ...new Set(artworks.map(artwork => artwork.category))];
+  // Extract unique categories from artworks with safety checks
+  const categories = ['all', ...new Set(
+    artworks
+      .map(artwork => artwork?.category)
+      .filter(category => category && typeof category === 'string')
+  )];
 
   // Filter artworks based on selected category
   useEffect(() => {
     if (selectedCategory === 'all') {
       setFilteredArtworks(artworks);
     } else {
-      setFilteredArtworks(artworks.filter(artwork => artwork.category === selectedCategory));
+      setFilteredArtworks(artworks.filter(artwork => artwork?.category === selectedCategory));
     }
   }, [selectedCategory, artworks]);
 
@@ -83,7 +87,10 @@ const ArtGallery = ({ artworks = [] }) => {
             className={`${styles.categoryButton} ${selectedCategory === category ? styles.active : ''}`}
             onClick={() => setSelectedCategory(category)}
           >
-            {category.charAt(0).toUpperCase() + category.slice(1)}
+            {category && typeof category === 'string' ? 
+              category.charAt(0).toUpperCase() + category.slice(1) : 
+              'Unknown'
+            }
           </button>
         ))}
       </div>

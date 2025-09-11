@@ -140,3 +140,13 @@ export const testimonials = [
     relationship: "Senior Manager"
   }
 ];
+
+// Add default export to fix build error
+export default {
+  professionalSummary,
+  certifications,
+  workEligibility,
+  contactInfo,
+  documents,
+  testimonials
+};

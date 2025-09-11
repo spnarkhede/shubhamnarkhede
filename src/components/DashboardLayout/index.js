@@ -19,6 +19,19 @@ const DashboardLayout = ({
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(false);
   
+  // Safety check for undefined roleConfig
+  if (!roleConfig) {
+    console.error(`Role configuration not found for role: ${role}`);
+    return (
+      <Layout title="Role Not Found" description="The requested role configuration was not found.">
+        <div style={{ padding: '2rem', textAlign: 'center' }}>
+          <h1>Role Not Found</h1>
+          <p>The role "{role}" is not configured. Please check the role configuration.</p>
+        </div>
+      </Layout>
+    );
+  }
+
   // Set active role when component mounts
   useEffect(() => {
     setActiveRole(role);
@@ -39,7 +52,7 @@ const DashboardLayout = ({
     const handleResize = () => checkScrollPosition();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [roleConfig.tabs]);
+  }, [roleConfig?.tabs]);
 
   // Scroll navigation functions
   const scrollLeft = () => {
@@ -93,7 +106,7 @@ const DashboardLayout = ({
             ref={navRef}
             onScroll={checkScrollPosition}
           >
-            {roleConfig.tabs.map((tab) => (
+            {roleConfig.tabs && roleConfig.tabs.map((tab) => (
               <Link
                 key={tab.id}
                 to={`/${role}/${tab.id}`}
@@ -106,6 +119,7 @@ const DashboardLayout = ({
                 {tab.label}
               </Link>
             ))}
+
           </div>
           
           {showRightArrow && (

@@ -8,7 +8,10 @@ const useRoleStore = create((set) => ({
   // Current active tab for each role dashboard
   activeTab: {
     'recruitment-specialist': 'introduction',
-    'software-developer': 'code-samples',
+    'software-developer': 'introduction',
+    'tech-enthusiast': 'introduction',
+    'curious-visitor': 'introduction',
+    'growth-partner': 'introduction',
     'investigator': 'case-experience',
     'adventurer': 'personal-growth'
   },
@@ -48,16 +51,45 @@ const useRoleStore = create((set) => ({
       tabs: [
         { id: 'introduction', label: 'Introduction' },
         { id: 'experience', label: 'Experience' },
-        { id: 'resume', label: 'Resume Download' },
-        { id: 'skills', label: 'Skills & Certifications' },
-        { id: 'recommendations', label: 'Recommendations' },
         { id: 'projects', label: 'Projects' },
-        { id: 'contact', label: 'Contact' },
-        { id: 'continue-watching', label: 'Continue Watching' },
         { id: 'code-samples', label: 'Code Samples' },
-        { id: 'technical-skills', label: 'Technical Skills' },
-        { id: 'project-repos', label: 'Project Repositories' },
-        { id: 'certifications', label: 'Certifications' }
+        { id: 'contact', label: 'Contact' }
+      ]
+    },
+    'tech-enthusiast': {
+      title: 'Tech Enthusiast',
+      description: 'Technical insights and development resources',
+      theme: 'tech',
+      tabs: [
+        { id: 'introduction', label: 'Introduction' },
+        { id: 'articles', label: 'Articles' },
+        { id: 'projects', label: 'Projects' },
+        { id: 'code-samples', label: 'Code Samples' },
+        { id: 'resources', label: 'Resources' }
+      ]
+    },
+    'curious-visitor': {
+      title: 'Curious Visitor',
+      description: 'Explore my journey and discoveries',
+      theme: 'curious',
+      tabs: [
+        { id: 'introduction', label: 'Introduction' },
+        { id: 'articles', label: 'Articles' },
+        { id: 'books', label: 'Books' },
+        { id: 'experience', label: 'Experience' },
+        { id: 'portfolio', label: 'Portfolio' },
+        { id: 'contact', label: 'Contact' }
+      ]
+    },
+    'growth-partner': {
+      title: 'Growth Partner',
+      description: 'Collaboration and partnership opportunities',
+      theme: 'growth',
+      tabs: [
+        { id: 'introduction', label: 'Introduction' },
+        { id: 'art-gallery', label: 'Art Gallery' },
+        { id: 'projects', label: 'Projects' },
+        { id: 'contact', label: 'Contact' }
       ]
     },
     'investigator': {
